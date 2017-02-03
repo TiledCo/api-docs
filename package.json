@@ -1,0 +1,26 @@
+{
+  "name": "api-docs",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Tiled API documentation.</h1>",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "bundle install",
+    "prestart": "node open-browser.js",
+    "start": "bundle exec middleman server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "./deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiledCo/api-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TiledCo/api-docs/issues"
+  },
+  "homepage": "https://github.com/TiledCo/api-docs#readme",
+  "devDependencies": {
+    "open": "0.0.5"
+  }
+}
