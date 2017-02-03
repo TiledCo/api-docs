@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>API Reference</title>
 
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -16,11 +14,11 @@
   background-color: #272822;
 }
 .highlight .err {
-  color: #151515;
-  background-color: #ac4142;
+  color: #272822;
+  background-color: #f92672;
 }
 .highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #505050;
+  color: #75715e;
 }
 .highlight .cp {
   color: #f4bf75;
@@ -29,45 +27,45 @@
   color: #f4bf75;
 }
 .highlight .o, .highlight .ow {
-  color: #d0d0d0;
+  color: #f8f8f2;
 }
 .highlight .p, .highlight .pi {
-  color: #d0d0d0;
+  color: #f8f8f2;
 }
 .highlight .gi {
-  color: #90a959;
+  color: #a6e22e;
 }
 .highlight .gd {
-  color: #ac4142;
+  color: #f92672;
 }
 .highlight .gh {
-  color: #6a9fb5;
-  background-color: #151515;
+  color: #66d9ef;
+  background-color: #272822;
   font-weight: bold;
 }
 .highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #aa759f;
+  color: #ae81ff;
 }
 .highlight .kc {
-  color: #d28445;
+  color: #fd971f;
 }
 .highlight .kt {
-  color: #d28445;
+  color: #fd971f;
 }
 .highlight .kd {
-  color: #d28445;
+  color: #fd971f;
 }
 .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #90a959;
+  color: #a6e22e;
 }
 .highlight .sr {
-  color: #75b5aa;
+  color: #a1efe4;
 }
 .highlight .si {
-  color: #8f5536;
+  color: #cc6633;
 }
 .highlight .se {
-  color: #8f5536;
+  color: #cc6633;
 }
 .highlight .nn {
   color: #f4bf75;
@@ -79,31 +77,31 @@
   color: #f4bf75;
 }
 .highlight .na {
-  color: #6a9fb5;
+  color: #66d9ef;
 }
 .highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #90a959;
+  color: #a6e22e;
 }
 .highlight .ss {
-  color: #90a959;
+  color: #a6e22e;
 }
     </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;]">
+  <body class="index" data-languages="[&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" />
+        <img src="images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="tocify-wrapper">
-      <img src="images/logo.png" />
+      <img src="images/logo.png" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -112,8 +110,7 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -121,226 +118,283 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the Tiled API!</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>You can use our API to enable single sign on (SSO) into our app.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+<p>More to come&hellip;</p>
 
-<h1 id="authentication">Authentication</h1>
+          <h1 id="app-sso">App SSO</h1>
 
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<h2 id="http-based-authentication">HTTP based authentication</h2>
 
 <blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
+<p>Example SSO universal link</p>
 </blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-<h1 id="kittens">Kittens</h1>
-
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+<pre class="highlight plaintext"><code>https://hub.tiled.co/app/sso/?
+  url=https%3A%2F%2Fmy.auth.provider&amp;
+  apiToken=1234abcd5678efgh&amp;
+  usernameLabel=email&amp;
+  usernameKey=user.email&amp;
+  passwordKey=user.password&amp;
+  emailPath=user.profile.login&amp;
+  namePath=user.profile.firstName&amp;
+  namePath=user.profile.lastName&amp;
+  storeCredentials=true
 </code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>For this example, and the username of <code class="prettyprint">bob@example.com</code> and password of <code class="prettyprint">fancypants</code>, the following will POST to <code class="prettyprint">https://my.auth.provider</code>:</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bob@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fancypants"</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
+<blockquote>
+<p>The default POST body if <code class="prettyprint">usernameKey</code> and <code class="prettyprint">passwordKey</code> were not set would look like:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bob@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fancypants"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>And we are expecting a JSON result of the form:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bob@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Johnson"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>You can see <code class="prettyprint">emailPath</code> and the two <code class="prettyprint">namePath</code> parameters will allow the app to correctly parse the result and extract <code class="prettyprint">bob@example.com</code> as the email address to use for finding the correct tiled user in our system.
+The name parsed from this results would be <code class="prettyprint">Bob Johnson</code>.</p>
+</blockquote>
 
-<p>This endpoint retrieves all kittens.</p>
+<p>Use this method to authenticate with third party identity providers.</p>
 
-<h3 id="http-request">HTTP Request</h3>
+<h3 id="universal-link">Universal Link</h3>
 
-<p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
+<p><code class="prettyprint">https://hub.tiled.co/app/sso/</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>url</td>
+<td>true</td>
+<td>none</td>
+<td>The url for your identity provider&rsquo;s authorization endpoint.</td>
 </tr>
 <tr>
-<td>available</td>
+<td>apiToken</td>
 <td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>none</td>
+<td>Your Tiled API token - generated in <strong>account settings</strong> on <a href="https://hub.tiled.co" target="_blank">https://hub.tiled.co</a>.</td>
+</tr>
+<tr>
+<td>emailPath</td>
+<td>true</td>
+<td>none</td>
+<td>The <strong>path</strong> to the user&rsquo;s email address in the response body.</td>
+</tr>
+<tr>
+<td>namePath</td>
+<td>true</td>
+<td>none</td>
+<td>The <strong>path</strong> to the user&rsquo;s name in the response body. If the user name is in multiple parts, they can be specified with multiple instances of <code class="prettyprint">namePath</code> parameters and the results will be joined with a space at runtime.</td>
+</tr>
+<tr>
+<td>expirationPath</td>
+<td>false</td>
+<td>null</td>
+<td>The <strong>path</strong> to an optional session expiration date in the response body.</td>
+</tr>
+<tr>
+<td>method</td>
+<td>false</td>
+<td>POST</td>
+<td>HTTP method to use when accessing <code class="prettyprint">url</code>.</td>
+</tr>
+<tr>
+<td>usernameLabel</td>
+<td>false</td>
+<td>username</td>
+<td>The placeholder text for the username form input in the app.</td>
+</tr>
+<tr>
+<td>passwordLabel</td>
+<td>false</td>
+<td>password</td>
+<td>The placeholder text for the password form input in the app.</td>
+</tr>
+<tr>
+<td>usernameKey</td>
+<td>false</td>
+<td>username</td>
+<td>The <strong>path</strong> in the request body to set the username in the request sent to <code class="prettyprint">url</code>.</td>
+</tr>
+<tr>
+<td>passwordKey</td>
+<td>false</td>
+<td>password</td>
+<td>The <strong>path</strong> in the request body to set the password in the request sent to <code class="prettyprint">url</code>.</td>
+</tr>
+<tr>
+<td>ttl</td>
+<td>false</td>
+<td>null</td>
+<td>How long the session should last (in milliseconds or a <a href="https://www.npmjs.com/package/ms" target="_blank">string representation</a> e.g. &ldquo;24h&rdquo;, &ldquo;30m&rdquo;, &ldquo;12345s&rdquo;, &ldquo;4d&rdquo;). Note, if <code class="prettyprint">expirationPath</code> is set and a valid date is found using it, <code class="prettyprint">ttl</code> will not be used.</td>
+</tr>
+<tr>
+<td>formTitle</td>
+<td>false</td>
+<td>Sign in</td>
+<td>The title displayed at the top of the sign in form in the app.</td>
+</tr>
+<tr>
+<td>formLogo</td>
+<td>false</td>
+<td>null</td>
+<td>A URL to an image to display at the top of the sign in form in the app. The logo is letterboxed in a rectangle 306x80. Note - if set, <code class="prettyprint">formTitle</code> will not be used.</td>
+</tr>
+<tr>
+<td>primaryColor</td>
+<td>false</td>
+<td>#eb2227</td>
+<td>The background color of the sign in button and the text color of the form inputs. Note, the sign in button text color is white.</td>
+</tr>
+<tr>
+<td>storeCredentials</td>
+<td>false</td>
+<td>false</td>
+<td>If this is true, the user&rsquo;s credentials are stored in the device Keychain and when a session expires the user can authenticate with TouchID or 4-digit PIN to get a new session.</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="warning">
+Remember — make sure all your url parameters are encoded!
 </aside>
 
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<h2 id="web-based-authentication">Web based authentication</h2>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Example SSO universal link</p>
 </blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<pre class="highlight plaintext"><code>https://hub.tiled.co/app/sso/?
+  idp=fancypantsapp&amp;
+  ttl=24h
+</code></pre>
+<p>Use this method to authenticate with third party identity providers using a web-based OAuth, OpenID, SAML or other flow.</p>
 
-<p>This endpoint retrieves a specific kitten.</p>
+<aside class="notice">
+This form of SSO requires custom configuration by Tiled engineers. Contact us if you are interested in this form of SSO.
+</aside>
 
-<aside class="warning">Inside HTML code blocks like this one, you can&rsquo;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id="universal-link">Universal Link</h3>
 
-<h3 id="http-request">HTTP Request</h3>
+<p><code class="prettyprint">https://hub.tiled.co/app/sso/</code></p>
 
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
-
-<h3 id="url-parameters">URL Parameters</h3>
+<h3 id="query-parameters">Query Parameters</h3>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Required</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>id</td>
+<td>true</td>
+<td>none</td>
+<td>A unique ID provided by Tiled</td>
+</tr>
+<tr>
+<td>ttl</td>
+<td>false</td>
+<td>null</td>
+<td>How long the session should last (in milliseconds or a <a href="https://www.npmjs.com/package/ms" target="_blank">string representation</a> e.g. &ldquo;24h&rdquo;, &ldquo;30m&rdquo;, &ldquo;12345s&rdquo;, &ldquo;4d&rdquo;). Note - if <code class="prettyprint">ttl</code> is not set, the session will not expire unless manually revoked on the Tiled website.</td>
 </tr>
 </tbody></table>
 
-          <h1 id="errors">Errors</h1>
+<aside class="warning">
+Remember — make sure all your url parameters are encoded!
+</aside>
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
+<h2 id="using-custom-auth-tokens">Using custom auth tokens</h2>
 
-<p>The Kittn API uses the following error codes:</p>
+<blockquote>
+<p>Example SSO universal link</p>
+</blockquote>
+<pre class="highlight plaintext"><code>https://hub.tiled.co/app/auth/?
+  idp=fancypantsapp&amp;
+  token=1234abcd5678efgh
+  ttl=24h
+</code></pre>
+<p>Use this method if you want to generate and sign a secure token and send it directly into the app to authenticate the user.</p>
+
+<aside class="notice">
+This form of SSO requires custom configuration by Tiled engineers. Contact us if you are interested in this form of SSO.
+</aside>
+
+<h3 id="universal-link">Universal Link</h3>
+
+<p><code class="prettyprint">https://hub.tiled.co/app/sso/</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
+<td>id</td>
+<td>true</td>
+<td>none</td>
+<td>A unique ID provided by Tiled</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
+<td>token</td>
+<td>true</td>
+<td>none</td>
+<td>A signed token containing the user&rsquo;s email address for lookup</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+<td>ttl</td>
+<td>false</td>
+<td>null</td>
+<td>How long the session should last (in milliseconds or a <a href="https://www.npmjs.com/package/ms" target="_blank">string representation</a> e.g. &ldquo;24h&rdquo;, &ldquo;30m&rdquo;, &ldquo;12345s&rdquo;, &ldquo;4d&rdquo;). Note - if <code class="prettyprint">ttl</code> is not set, the session will not expire unless manually revoked on the Tiled website.</td>
 </tr>
 </tbody></table>
+
+<aside class="warning">
+Remember — make sure all your url parameters are encoded!
+</aside>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
