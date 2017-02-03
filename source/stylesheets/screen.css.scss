@@ -455,7 +455,7 @@ html, body {
   }
 
   code {
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.07);
     padding: 3px;
     border-radius: 3px;
     @extend %break-words;
@@ -558,6 +558,10 @@ html, body {
       color: #ccc;
       border-top: 1px solid #000;
       border-bottom: 1px solid #404040;
+
+      &>code {
+        color: palegoldenrod;
+      }
     }
   }
 }
