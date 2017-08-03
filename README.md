@@ -1,5 +1,7 @@
 <h1 align="center">Tiled API documentation.</h1>
 
+[View the docs](https://tiledco.github.io/api-docs)
+
 Installation
 ------------------------------
 

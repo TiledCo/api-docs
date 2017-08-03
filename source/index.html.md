@@ -1,14 +1,12 @@
 ---
 title: API Reference
 
-language_tabs:
-  - javascript
-
 toc_footers:
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
   - app_sso
+  - custom_tiles_with_remote_data
 
 search: true
 ---
