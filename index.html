@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;javascript&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -100,9 +100,6 @@
     </a>
     <div class="tocify-wrapper">
       <img src="images/logo.png" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -391,11 +388,48 @@ This form of SSO requires custom configuration by Tiled engineers. Contact us if
 Remember — make sure all your url parameters are encoded!
 </aside>
 
+          <h1 id="custom-tiles-with-remote-data">Custom Tiles with Remote Data</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>Custom tiles can be configured to fetch remote data for rendering. This documentation outlines the configuration values you can use and how they work.</p>
+
+<h2 id="configuring-remote-url">Configuring remote URL</h2>
+
+<blockquote>
+<p>Example URL <strong>without</strong> query string parameters</p>
+</blockquote>
+<pre class="highlight plaintext"><code>// ENTERED URL
+https://www.example.com/user/data
+</code></pre><pre class="highlight plaintext"><code>// REQUEST URL
+https://www.example.com/user/data?
+  userId=am9obmRvZUBleGFtcGxlLmNvbQ%3D%3D
+</code></pre>
+<p>You provide a URL where the data needed for the custom tile can be accessed. The URL will be access with an <code class="prettyprint">HTTP GET</code> request with the current user&rsquo;s ID appended as the query string parameter <code class="prettyprint">userId</code>.</p>
+
+<p>The user ID is their <code class="prettyprint">email address</code> that has been <code class="prettyprint">base64</code> encoded.</p>
+
+<aside class="notice">
+You can add other query string parameters in the URL body as you wish. If you provide your own parameters, `userId` will be appended to the end of the url.
+</aside>
+
+<h2 id="response">Response</h2>
+
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My custom label"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some great body copy"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#0080ff"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The URL you provide should return a valid <code class="prettyprint">JSON object</code> with the <code class="prettyprint">Content-Type</code> header set to <code class="prettyprint">application/json</code></p>
+
+<p>The data you return will be used to override the default values (configurable in the hub editor) for the custom tile.</p>
+
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
