@@ -43,5 +43,4 @@ You can add other query string parameters in the URL body as you wish. If you pr
 
 The URL you provide should return a valid `JSON object` with the `Content-Type` header set to `application/json`
 
-The data you return will be used to override the default values (configurable in the hub editor) for the custom tile.
-
+The data you return will be used to override the default values (configurable in the app editor) for the custom tile.

@@ -5,7 +5,7 @@
 > Example SSO universal link
 
 ```
-https://hub.tiled.co/app/sso/?
+https://app.tiled.co/app/sso/?
   url=https%3A%2F%2Fmy.auth.provider&
   apiToken=1234abcd5678efgh&
   usernameLabel=email&
@@ -18,7 +18,7 @@ https://hub.tiled.co/app/sso/?
 ```
 
 > For this example, and the username of `bob@example.com` and password of `fancypants`, the following will POST to `https://my.auth.provider`:
-> 
+>
 
 ```json
 {
@@ -59,14 +59,14 @@ Use this method to authenticate with third party identity providers.
 
 ### Universal Link
 
-`https://hub.tiled.co/app/sso/`
+`https://app.tiled.co/app/sso/`
 
 ### Query Parameters
 
 Parameter | Required | Default | Description
 --------- | -------- | ------- | -----------
 url | true | none | The url for your identity provider's authorization endpoint.
-apiToken | true | none | Your Tiled API token - generated in **account settings** on <a href="https://hub.tiled.co" target="_blank">https://hub.tiled.co</a>.
+apiToken | true | none | Your Tiled API token - generated in **account settings** on <a href="https://app.tiled.co" target="_blank">https://app.tiled.co</a>.
 emailPath | true | none | The **path** to the user's email address in the response body.
 namePath | true | none | The **path** to the user's name in the response body. If the user name is in multiple parts, they can be specified with multiple instances of `namePath` parameters and the results will be joined with a space at runtime.
 expirationPath | false | null | The **path** to an optional session expiration date in the response body.
@@ -92,7 +92,7 @@ Remember — make sure all your url parameters are encoded!
 > Example SSO universal link
 
 ```
-https://hub.tiled.co/app/sso/?
+https://app.tiled.co/app/sso/?
   idp=fancypantsapp&
   ttl=24h
 ```
@@ -105,7 +105,7 @@ This form of SSO requires custom configuration by Tiled engineers. Contact us if
 
 ### Universal Link
 
-`https://hub.tiled.co/app/sso/`
+`https://app.tiled.co/app/sso/`
 
 ### Query Parameters
 
@@ -125,7 +125,7 @@ Remember — make sure all your url parameters are encoded!
 > Example SSO universal link
 
 ```
-https://hub.tiled.co/app/auth/?
+https://app.tiled.co/app/auth/?
   idp=fancypantsapp&
   token=1234abcd5678efgh
   ttl=24h
@@ -139,7 +139,7 @@ This form of SSO requires custom configuration by Tiled engineers. Contact us if
 
 ### Universal Link
 
-`https://hub.tiled.co/app/sso/`
+`https://app.tiled.co/app/sso/`
 
 ### Query Parameters
 
